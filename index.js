@@ -16,7 +16,8 @@ module.exports = {
     var highchartsPath = 'vendor/highcharts';
 
     if (options.includeHighCharts || options.includeHighCharts3D) {
-      app.import(path.join(highchartsPath, 'highcharts.src.js'));
+      app.import('vendor/highcharts-release/highcharts.src.js');
+      // app.import(path.join(highchartsPath, 'highcharts.src.js'));
     }
 
     if (options.includeHighStock) {
