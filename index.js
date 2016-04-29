@@ -20,7 +20,8 @@ module.exports = {
     }
 
     if (options.includeHighStock) {
-      app.import(path.join(highchartsPath, 'highstock.src.js'));
+      app.import('vendor/highcharts-release/highcharts-more.src.js');
+      // app.import(path.join(highchartsPath, 'highstock.src.js'));
     }
 
     if (options.includeHighMaps) {
