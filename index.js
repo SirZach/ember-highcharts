@@ -44,18 +44,22 @@ module.exports = {
     }
   },
 
-  treeForVendor: function(vendorTree) {
-    var trees = [];
-    var highchartsPath = path.dirname(require.resolve('highcharts'));
+  treeForVendor: function() {
+    return this.treeGenerator(path.join(__dirname, 'node_modules'));
+  },
+ 
+  // treeForVendor: function(vendorTree) {
+  //   var trees = [];
+  //   var highchartsPath = path.dirname(require.resolve('highcharts'));
 
-    if (vendorTree) {
-      trees.push(vendorTree);
-    }
+  //   if (vendorTree) {
+  //     trees.push(vendorTree);
+  //   }
 
-    trees.push(new Funnel(highchartsPath, {
-      destDir: 'highcharts'
-    }));
+  //   trees.push(new Funnel(highchartsPath, {
+  //     destDir: 'highcharts'
+  //   }));
 
-    return mergeTrees(trees);
-  }
+  //   return mergeTrees(trees);
+  // }
 };
